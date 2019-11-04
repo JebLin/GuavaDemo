@@ -108,7 +108,13 @@ public class CacheGC {
         TimeUnit.SECONDS.sleep(1);
         str = cache.getIfPresent("JebLin"); //不会重新加载创建cache
         System.out.println("被销毁：" + (str == null ? "是的" : "否"));
+
+        TimeUnit.SECONDS.sleep(3);
+        str = cache.getIfPresent("JebLin"); //不会重新加载创建cache
+        System.out.println("被销毁：" + (str == null ? "是的" : "否"));
+        System.out.println(cache.getIfPresent("JebLin"));
     }
+
 
 
     /**
